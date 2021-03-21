@@ -17,20 +17,6 @@ class App extends Component {
           phone: '02465637392',
           id: "u383894v2bh"
         },
-        {
-          name: 'Newton Tamps',
-          email: 'Newton@mail.com',
-          gender: 'Male',
-          phone: '02478362893',
-          id: "jh387b3738"
-        },
-        {
-          name: 'Olina Yanks',
-          email: 'Olina@mail.com',
-          gender: 'Female',
-          phone: '05647399372',
-          id: "79842gu82"
-        },
       ]
     }
   }

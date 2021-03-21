@@ -6,20 +6,7 @@ import { Component } from 'react';
 import AddContact from './component/AddContact';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contacts: [
-        {
-          name: 'Meeky Pangbe',
-          email: 'meeky@mail.com',
-          gender: 'Male',
-          phone: '02465637392',
-          id: "u383894v2bh"
-        },
-      ]
-    }
-  }
+  
   addNewContact = (contacts) => {
     contacts.id = Math.random().toString();
     this.setState({
@@ -48,7 +35,6 @@ class App extends Component {
           <Col>
             <h3>Contact Page</h3>
             <AllContact
-              contactsData={this.state.contacts}
               deleteContact={this.deleteContact}
               editContact={this.editContact}
             />

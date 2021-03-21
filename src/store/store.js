@@ -4,7 +4,7 @@ import authReducer from "../reducers/authReducer";
 
 export const store = createStore (
     combineReducers ({
-        contacts: contactReducer,
+        contactsState: contactReducer,
         auth: authReducer,
     })
 );

@@ -14,19 +14,19 @@ class App extends Component {
   //   })
   // }
 
-  deleteContact = (id) => {
-    let undeletedContacts = this.state.contacts.filter(contacts => contacts.id !== id)
-    this.setState({
-      contacts: undeletedContacts
-    })
-  }
+  // deleteContact = (id) => {
+  //   let undeletedContacts = this.state.contacts.filter(contacts => contacts.id !== id)
+  //   this.setState({
+  //     contacts: undeletedContacts
+  //   })
+  // }
 
-  editContact = (id, updatedContact) => {
-    this.setState({
-      contacts: this.state.contacts.map(contacts => contacts.id === id ? updatedContact : contacts)
-    })
-  }
-  
+  // editContact = (id, updatedContact) => {
+  //   this.setState({
+  //     contacts: this.state.contacts.map(contacts => contacts.id === id ? updatedContact : contacts)
+  //   })
+  // }
+
   render() {
     return (
       <Container fluid style={{ marginTop: '2rem' }}>

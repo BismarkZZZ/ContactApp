@@ -1,9 +1,11 @@
-import React, {useState} from 'react'
-import { Button, Card, Col, Modal } from 'react-bootstrap'
+import React, {useState} from 'react';
+import { Button, Card, Col, Modal } from 'react-bootstrap';
 import EditContact from './EditContact';
+import {connect} from "react-redux";
+import { deleteContact } from "../actions/contactActions";
 
 
-export default function UnitContact(props) {
+function UnitContact(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -45,3 +47,9 @@ export default function UnitContact(props) {
         </>
     )
 }
+
+const mapDispatchToProps = {
+    deleteContact
+}
+
+export default connect(null, mapDispatchToProps) (UnitContact);

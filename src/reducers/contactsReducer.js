@@ -15,6 +15,13 @@ const contactsReducer = (state = initialState, action) => {
         case "ADD_CONTACT":
             return { ...state, contacts: [...state.contacts, action.payload]};
 
+        case "DELETE_CONTACT":
+            let undeletedContacts = state.contacts.filter(contacts => contacts.id !== action.payload)
+            return {...state, contacts: undeletedContacts};
+
+        case "EDIT_CONTACT":
+            return {...state, contacts: state.contacts.map(contacts => contacts.id === action.payload.id ? action.payload : contacts),};
+
         default:
             return state;
     }

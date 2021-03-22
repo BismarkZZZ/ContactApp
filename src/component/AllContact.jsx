@@ -13,8 +13,8 @@ const AllContact = (props) => {
                         return (
                             <UnitContact contactInfo={contact}
                                 key={contact.id}
-                                deleteContact={props.deleteContact}
-                                editContact={props.editContact}
+                                
+                                
                             /> 
                         ) 
                      })

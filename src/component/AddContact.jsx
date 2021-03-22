@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Button, Form } from 'react-bootstrap';
+import {connect} from "react-redux";
+import {addContact} from "../actions/contactActions";
 
-export default class AddContact extends Component {
+class AddContact extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,3 +61,9 @@ export default class AddContact extends Component {
         )
     }
 }
+
+const mapDispatchToProps = {
+   addContact
+}
+
+export default connect(null, mapDispatchToProps) (AddContact);
